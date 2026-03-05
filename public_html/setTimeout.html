@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>SetTimeout</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        
+        .container{
+            width: 1000px;
+            margin: auto;
+        }
+        #box{
+            width: 100px;
+            height: 100px;
+            background: red;
+            transition: all 1s linear;
+        }
+    </style>
+    </head>
+    <body>
+        <div class="container">
+        
+        
+        
+        
+        
+        <div id="box">
+            
+        </div>
+        <hr>
+        <button onclick="setTimeout(showHide, 2000, 'none')">Hide after 2s</button>
+        <button onclick="setTimeout(showHide, 1000, 'block')">Show after 1s</button>
+        <button onclick="setTimeout(moveBox, 2000, -20)">Move to left after 2s</button>
+        <button onclick="setTimeout(moveBox, 2000, 20)">Move to right after 2s</button>
+        <button onclick="setTimeout(boxSize, 4000, 200, 200);">Increase the size after 4s</button>
+        <button onclick="setTimeout(boxSize, 3000, 50, 50);">Decrease the size after 3s</button>
+        </div>
+        
+        <script>
+            
+            /*
+             
+                setTimeout(
+                    function(){
+                        code block to be executed
+                    },
+    
+                    3000
+                );
+    
+    
+                setTimeout(functionName, delay, param1, param2, ...);
+           */
+           
+           
+           
+           
+           
+          
+           // alert your name after 3s
+           
+           //alert('Vladan');
+           
+           
+//           setTimeout(function(){
+//               alert('Vladan');
+//           }, 3000);
+           
+           
+           //alert sum of 2 number
+           
+           function sum( a, b){
+               alert( a + b);
+           }
+           
+           
+//           setTimeout(sum, 2000, 5, 7);
+           
+           
+           // manipulate parameters of the #box 
+          
+          function showHide(display){
+              document.getElementById('box').style.display = display;
+          }
+          
+          
+          function moveBox(margin){
+              document.getElementById('box').style.marginLeft = margin + 'px';
+          }
+          
+          
+          function boxSize(w, h){
+              document.getElementById('box').style.width = w + 'px';
+              document.getElementById('box').style.height = h + 'px';
+          }
+          
+        </script>
+    </body>
+</html>
